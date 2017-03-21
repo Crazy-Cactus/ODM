@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <?php
+    /*
       if ($page == 'ping')
       {
         ?>
@@ -10,6 +11,7 @@
           URL=http://localhost/IMIE/Projet%20JSP/ping.php">
         <?php
       }
+    */
     ?>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">

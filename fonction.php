@@ -1,25 +1,52 @@
 <?php
-  function connection()
+function connection()
+{
+  global $config;
+  try
   {
-    global $config;
-    try
-    {
-      $db = new PDO($config['dsn'],$config['username']);
-      $db -> exec('SET CHARACTER SET UTF8');
-    }
-    catch (PDOException $e)
-    {
-      die($e -> getMessage());
-    }
-    return $db;
+    $db = new PDO($config['dsn'],$config['username']);
+    $db -> exec('SET CHARACTER SET UTF8');
   }
+  catch (PDOException $e)
+  {
+    die($e -> getMessage());
+  }
+  return $db;
+}
 
-  function recup_user()
+function recup_user()
+{
+  global $db;
+  $resultat = $db->query('SELECT * FROM users');
+  return $resultat;
+}
+
+function add_error($link)
+{
+$date = date("d/m/Y");
+global $db;
+$stmt = $db->prepare("INSERT INTO donnees(dates, nom) VALUES (NOW(),?)");
+$stmt->bindParam(1, $link);
+$stmt->execute();
+}
+
+function recup_error()
+{
+global $db;
+$donnees = $db->query("SELECT * FROM donnees");
+return $donnees;
+}
+
+function aff_error()
+{
+  $tab = recup_error();
+  foreach ($tab as $tedt)
   {
-    global $db;
-    $resultat = $db->query('SELECT * FROM users');
-    return $resultat;
+    echo $tedt[0];
+    echo "<br/>";
+    echo $tedt[1];
   }
+}
 
 function ping($link)
 {
@@ -49,6 +76,7 @@ function ping($link)
         </ul>
       </div>
     <?php
+    add_error($link);
   }
 }
 ?>

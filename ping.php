@@ -2,7 +2,8 @@
 $page = 'ping';
 require_once('init.php');
 require_once('header.php');
-$serveurs = ['google.fr', 'ffring.com', 'tamer.com'];
+//$serveurs = ['192.168.200.25', '192.168.200.30'];
+$serveurs = ['google.fr', 'ffring.com', '412395472854.com'];
 
 foreach ($serveurs as $serveur)
 {
