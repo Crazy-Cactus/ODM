@@ -9,7 +9,7 @@ body
   background-color: rgb(247, 233, 216);
 }
 
-header, main, p,footer
+header, main, .panneau, footer
 {
   margin: 10px auto;
   text-align: center;
@@ -46,8 +46,22 @@ button a
 
 .panneau
 {
-  width: 250px;
+  width: 300px;
   padding: 30px;
   background-color: white;
   border-radius: 20px;
+}
+
+.online
+{
+  color: green;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.offline
+{
+  color: red;
+  display: block;
+  margin-bottom: 20px;
 }
