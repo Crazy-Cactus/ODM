@@ -32,7 +32,9 @@ function ping($link)
           <li><?php echo('<span class="online">ONLINE</span>'); ?></li>
           <li><?php echo('SERVEUR : ' . $link); ?></li>
           <li><?php echo "<br/>"; ?></li>
-          <li><?php echo ("Ping = " . substr($ping[10], strrpos($ping[10], '=') + 1)); ?></li>
+          <li><?php echo ("PING : " . substr($ping[10], strrpos($ping[10], '=') + 1)); ?></li>
+          <li><?php echo "<br/>"; ?></li>
+          <li><?php echo "DNS : <span class='online'>ON</span>"; ?></li>
         </ul>
       </div>
     <?php

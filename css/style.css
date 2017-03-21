@@ -11,7 +11,7 @@ body
 
 header, main, .panneau, footer
 {
-  margin: 10px auto;
+  margin: 20px auto;
   text-align: center;
   display: block;
 }
@@ -32,18 +32,20 @@ input
   margin: 20px auto;
 }
 
-button
+.ping
 {
-  width: 70px;
-  margin: auto;
-}
-
-button a
-{
+  margin-top: 10px;
   text-decoration: none;
   color: black;
+  background-color: rgb(203, 176, 136);
+  padding: 5px;
+  border-radius: 5px;
 }
 
+.ping:active
+{
+  background-color: rgb(153, 134, 105);
+}
 .panneau
 {
   width: 300px;
@@ -55,13 +57,13 @@ button a
 .online
 {
   color: green;
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
 .offline
 {
   color: red;
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
 }

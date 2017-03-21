@@ -1,7 +1,7 @@
 <?php
+  $page = 'index';
   require_once('init.php');
   require_once('header.php');
-  $page = 'index';
 
 if (isset($_SESSION["Admin"]) && $_SESSION["Admin"] == True)
 {
