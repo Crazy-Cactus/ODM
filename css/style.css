@@ -1,0 +1,53 @@
+*
+{
+  box-sizing: border-box;
+}
+
+body
+{
+  padding: 10px;
+  background-color: rgb(247, 233, 216);
+}
+
+header, main, p,footer
+{
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+}
+
+form
+{
+  padding: 50px;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+input
+{
+  text-align: center;
+  margin: 20px auto;
+}
+
+button
+{
+  width: 70px;
+  margin: auto;
+}
+
+button a
+{
+  text-decoration: none;
+  color: black;
+}
+
+.panneau
+{
+  width: 250px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+}
