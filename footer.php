@@ -8,8 +8,11 @@
           {
             ?> <a href="ping.php">Panneau</a> | <?php
           }
+          elseif ($page != 'journal')
+          {
+            ?> <a href="journal.php">Journal d'erreurs</a> | <?php 
+          }
           ?>
-            <a href="journal.php">Journal d'erreurs</a> | 
             <a href="index.php?logout=True">Se deconnecter</a>        <?php
         }
       ?>
