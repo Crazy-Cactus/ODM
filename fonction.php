@@ -40,12 +40,23 @@ return $donnees;
 function aff_error()
 {
   $tab = recup_error();
+  ?>
+    <table>
+      <tr>
+        <th>DATE</th>
+        <th>SERVEUR</th>
+      </tr>
+  <?php
   foreach ($tab as $tedt)
   {
-    echo $tedt[0];
-    echo "<br/>";
-    echo $tedt[1];
+    ?>
+      <tr>
+        <td> <?php echo $tedt[0]; ?> </td>
+        <td> <?php echo $tedt[1]; ?> </td>
+      </tr>
+    <?php
   }
+  ?> </table> <?php
 }
 
 function ping($link)

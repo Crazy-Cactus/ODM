@@ -67,3 +67,11 @@ input
   display: inline-block;
   margin-bottom: 20px;
 }
+
+table, tr, td, th
+{
+  margin: auto;
+  padding: 10px;
+  border: black solid 1px;
+  border-collapse: collapse;
+}
